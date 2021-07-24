@@ -1,10 +1,15 @@
 <template>
-  <div>mocked errorList</div>
+  <ul>
+    <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+  </ul>
 </template>
 
 <script>
 export default {
-  name: "ErrorList"
+  name: "ErrorList",
+  props: {
+    'errors': Array
+  }
 }
 </script>
 

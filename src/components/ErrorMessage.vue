@@ -1,5 +1,5 @@
 <template>
-  <div>mocked error message</div>
+  <b>Please correct the following error(s)</b>
 </template>
 
 <script>
