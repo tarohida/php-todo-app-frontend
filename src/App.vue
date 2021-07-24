@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ErrorRenderer v-bind:errors="errors"></ErrorRenderer>
+    <!--
+    <input class="new-task"
+           autofocus
+           autocomplete="off"
+           placeholder="What needs to be done?"
+           v-model="new_task"
+           @keyup.enter="addTodo"
+    />
+    -->
+    <!--
+    <TodoList v-bind:tasks="tasks"></TodoList>
+    -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ErrorRenderer from './components/ErrorRenderer'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ErrorRenderer
+  },
+  data: function () {
+    return {
+      errors: ['some', 'to']
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
