@@ -1,7 +1,10 @@
 <template>
   <li class="list-group-item">
     <TodoCheckbox v-bind:task="task"></TodoCheckbox>
-    <DeleteTaskButton v-bind:task-id="task.id"></DeleteTaskButton>
+    <DeleteTaskButton
+        v-bind:task-id="task.id"
+        v-on:delete-task="pipeEvent($event)"
+    ></DeleteTaskButton>
   </li>
 </template>
 
@@ -17,6 +20,11 @@ export default {
   components: {
     TodoCheckbox,
     DeleteTaskButton
+  },
+  methods: {
+    pipeEvent(event) {
+      this.$emit('delete-task', event)
+    }
   }
 }
 </script>

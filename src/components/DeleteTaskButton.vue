@@ -5,8 +5,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: "DeleteTaskButton",
   props: {
@@ -14,7 +12,7 @@ export default {
   },
   methods: {
     deleteTask: function () {
-      axios.delete(`http://127.0.0.1/api/tasks/${this.taskId}`)
+      this.$emit('delete-task', this.taskId)
     }
   }
 }

@@ -1,7 +1,12 @@
 <template>
   <div class="form-check">
     <ul class="list-group">
-      <TodoItem v-for="task in tasks" v-bind:task="task" v-bind:key="task.id"></TodoItem>
+      <TodoItem
+          v-for="task in tasks"
+          v-bind:task="task"
+          v-bind:key="task.id"
+          v-on:delete-task="pipeEvent($event)"
+      ></TodoItem>
     </ul>
   </div>
 </template>
@@ -16,7 +21,11 @@ export default {
   },
   components: {
     TodoItem
-  }
+  },
+  methods: {
+    pipeEvent(event) {
+      this.$emit('delete-task', event)
+    }}
 }
 </script>
 

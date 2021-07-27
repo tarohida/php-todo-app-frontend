@@ -8,7 +8,10 @@
            v-model="new_task"
            @keyup.enter="addTodo"
     />
-    <TodoList v-bind:tasks="tasks"></TodoList>
+    <TodoList
+        v-bind:tasks="tasks"
+        v-on:delete-task="deleteTask($event)"
+    ></TodoList>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -63,7 +66,8 @@ export default {
       }
       const bodyFormData = new FormData();
       bodyFormData.append('title', value);
-      axios({
+      let self = this
+      const add = axios({
         method: 'post',
         url: 'http://127.0.0.1/api/tasks/create',
         data: bodyFormData,
@@ -95,7 +99,22 @@ export default {
             }
             console.log(error.config);
           });
-      this.getTodo()
+      const list = function () {
+        self.getTodo();
+      }
+      Promise.all([add]).then(function () {
+        list();
+      });
+    },
+    deleteTask: async function (taskId) {
+      const del = axios.delete(`http://127.0.0.1/api/tasks/${taskId}`);
+      let self = this
+      const list = function () {
+        self.getTodo();
+      }
+      Promise.all([del]).then(function () {
+        list();
+      });
     }
   }
 }
