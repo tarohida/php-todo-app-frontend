@@ -7,23 +7,20 @@
         後述する "key" も各コンポーネントに
         指定する必要があります。
       -->
-      <TodoItem
+      <li
           v-for="item in groceryList"
-          v-bind:todo="item"
           v-bind:key="item.id"
-      ></TodoItem>
+      >
+        {{ item.text }}
+      </li>
     </ol>
   </div>
 
 </template>
 
 <script>
-import TodoItem from './TodoItem.vue'
 export default {
   name: 'TodoListApp',
-  components: {
-    TodoItem
-  },
   data() {
     return {
       groceryList: [
