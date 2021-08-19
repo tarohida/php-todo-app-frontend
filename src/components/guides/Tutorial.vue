@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="../../assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
   <Clock></Clock>
   <BindAttribute></BindAttribute>
@@ -38,25 +38,25 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Clock from './components/Clock.vue'
-import BindAttribute from './components/BindAttribute.vue'
-import EventHandling from './components/EventHandling.vue'
-import TwoWayBinding from './components/TwoWayBinding.vue'
-import ConditionalRendering from './components/ConditionalRendering.vue'
-import ListRendering from './components/ListRendering.vue'
-import TodoListApp from './components/TodoListApp'
-import WatchExample from './components/WatchExample.vue'
-import ClassAndStyle from './components/ClassAndStyle.vue'
-import List from './components/List.vue'
-import TodoList from './components/TodoList.vue'
-import EventWithMethod from './components/EventWithMethod.vue'
-import DataBind from './components/DataBind.vue'
-import ButtonCounter from './components/ButtonCounter.vue'
-import BlogPostEventDemo from './components/BlogPostEventDemo.vue'
-import CustomInput from './components/CustomInput.vue'
-import AlertBox from './components/AlertBox.vue'
-import CurrentTab from "./components/CurrentTab.vue";
+import HelloWorld from './HelloWorld.vue'
+import Clock from './Clock.vue'
+import BindAttribute from './BindAttribute.vue'
+import EventHandling from './EventHandling.vue'
+import TwoWayBinding from './TwoWayBinding.vue'
+import ConditionalRendering from './ConditionalRendering.vue'
+import ListRendering from './ListRendering.vue'
+import TodoListApp from './TodoListApp'
+import WatchExample from './WatchExample.vue'
+import ClassAndStyle from './ClassAndStyle.vue'
+import List from './List.vue'
+import TodoList from './TodoList.vue'
+import EventWithMethod from './EventWithMethod.vue'
+import DataBind from './DataBind.vue'
+import ButtonCounter from './ButtonCounter.vue'
+import BlogPostEventDemo from './BlogPostEventDemo.vue'
+import CustomInput from './CustomInput.vue'
+import AlertBox from './AlertBox.vue'
+import CurrentTab from "./CurrentTab.vue";
 
 export default {
   name: 'App',
