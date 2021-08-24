@@ -1,7 +1,6 @@
 <template>
-  <Navigation></Navigation>
+  <component v-bind:is="nav"></component>
   <TodoList></TodoList>
-  <p>Hello, World</p>
 </template>
 
 <script>
@@ -10,13 +9,17 @@ import TodoList from './components/TodoList.vue';
 
 export default {
   name: "App",
+  data: function () {
+    return {
+      nav: 'Navigation'
+    }
+  },
   components: {
     Navigation,
-    TodoList
+    TodoList,
   }
 }
 </script>
 
 <style scoped>
-
 </style>
