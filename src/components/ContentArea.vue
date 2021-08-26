@@ -16,6 +16,6 @@ export default {
 
 <style scoped>
 .vue-todo-app-content-area {
-
+  padding: 2em;
 }
 </style>
