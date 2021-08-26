@@ -4,7 +4,7 @@
       <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
           <span>
           <img
-              src="https://img.icons8.com/dusk/100/000000/user-female-circle.png"
+              src="https://s3.ap-northeast-1.amazonaws.com/media.taro-hida.tk/hatsune_face_mask.jpg"
               alt=""
               class="user-avatar-md rounded-circle"
               width="40"
