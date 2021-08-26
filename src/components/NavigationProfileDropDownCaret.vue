@@ -13,9 +13,8 @@
           </span>
       </a>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><span class="dropdown-item">@tarohida</span></li>
+        <li><a class="dropdown-item" href="#">ログアウト</a></li>
       </ul>
     </div>
   </div>
