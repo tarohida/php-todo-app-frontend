@@ -1,17 +1,17 @@
 <template>
   <Navigation></Navigation>
-  <TodoList></TodoList>
+  <ContentArea></ContentArea>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue';
-import TodoList from './components/TodoList.vue';
+import ContentArea from "./components/ContentArea";
 
 export default {
   name: "App",
   components: {
+    ContentArea,
     Navigation,
-    TodoList
   }
 }
 </script>
