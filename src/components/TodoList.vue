@@ -1,7 +1,7 @@
 <style scoped>
 .create-task-input-box {
   position: relative;
-  margin: 6px 12px 6px 12px;
+  margin: 6px 12px 6px 60px;
   width: 100%;
   font-size: 24px;
   font-family: inherit;
@@ -15,6 +15,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.create-task-input-box-label {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  padding: 6px 14px 6px 21px;
+}
 </style>
 
 <template>
@@ -23,13 +29,14 @@
     <div class="col-md-12 col-12 col-sm-12">
       <div class="card">
         <div class="card-header">
-          <label>
-            <input type="text"
-                   class="custom-control-input create-task-input-box"
-                   id="create-task-input-box"
-                   placeholder="What needs to be done?"
-            >
+          <label for="create-task-input-box" class="create-task-input-box-label">
+            <i class="far fa-plus-square fa-3x"></i>
           </label>
+          <input type="text"
+                 class="custom-control-input create-task-input-box"
+                 id="create-task-input-box"
+                 placeholder="What needs to be done?"
+          >
         </div>
         <div class="card-body">
           <div class="table-responsive">
