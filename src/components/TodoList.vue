@@ -1,10 +1,35 @@
+<style scoped>
+.create-task-input-box {
+  position: relative;
+  margin: 6px 12px 6px 12px;
+  width: 100%;
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.4em;
+  color: inherit;
+  padding: 12px;
+  border: 1px solid #999;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
+
 <template>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
   <div class="container">
     <div class="col-md-12 col-12 col-sm-12">
       <div class="card">
         <div class="card-header">
-          <h4>Task Details</h4>
+          <label>
+            <input type="text"
+                   class="custom-control-input create-task-input-box"
+                   id="create-task-input-box"
+                   placeholder="What needs to be done?"
+            >
+          </label>
         </div>
         <div class="card-body">
           <div class="table-responsive">
