@@ -1,25 +1,26 @@
 <style scoped>
 .create-task-input-box {
   position: relative;
-  margin: 6px 12px 6px 60px;
   width: 100%;
   font-size: 24px;
   font-family: inherit;
   font-weight: inherit;
   line-height: 1.4em;
   color: inherit;
-  padding: 12px;
+  padding: 12px 12px 12px 70px;
   border: 1px solid #999;
   box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  z-index: 10;
 }
 .create-task-input-box-label {
   position: absolute;
-  top: 14px;
-  left: 0;
-  padding: 6px 14px 6px 21px;
+  top: 8px;
+  left: 17px;
+  padding: 5px 10px 5px 10px;
+  z-index: 20;
 }
 </style>
 
