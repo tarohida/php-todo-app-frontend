@@ -22,6 +22,13 @@
   padding: 5px 10px 5px 10px;
   z-index: 20;
 }
+.todo-list {
+  position: relative;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 </style>
 
 <template>
@@ -41,9 +48,9 @@
         </div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-striped">
+            <table class="table table-hover">
               <tbody>
-              <tr>
+              <tr class="todo-list">
                 <td class="p-0 text-center">
                   <div class="custom-checkbox custom-control">
                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
@@ -51,12 +58,12 @@
                   </div>
                 </td>
                 <td>Ecommerce website</td>
-                <td>
+                <td class="p-0 text-center text-right">
                   <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
                   <a class="btn btn-danger btn-action" data-toggle="tooltip" title="" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')" data-original-title="Delete"><i class="fas fa-trash"></i></a>
                 </td>
               </tr>
-              <tr>
+              <tr class="todo-list">
                 <td class="p-0 text-center">
                   <div class="custom-checkbox custom-control">
                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-4">
@@ -64,12 +71,12 @@
                   </div>
                 </td>
                 <td>Android App</td>
-                <td>
+                <td class="p-0 text-center text-right">
                   <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
                   <a class="btn btn-danger btn-action" data-toggle="tooltip" title="" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')" data-original-title="Delete"><i class="fas fa-trash"></i></a>
                 </td>
               </tr>
-              <tr>
+              <tr class="todo-list">
                 <td class="p-0 text-center">
                   <div class="custom-checkbox custom-control">
                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-5">
@@ -77,12 +84,12 @@
                   </div>
                 </td>
                 <td>Logo Design</td>
-                <td>
+                <td class="p-0 text-center text-right">
                   <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
                   <a class="btn btn-danger btn-action" data-toggle="tooltip" title="" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')" data-original-title="Delete"><i class="fas fa-trash"></i></a>
                 </td>
               </tr>
-              <tr>
+              <tr class="todo-list">
                 <td class="p-0 text-center">
                   <div class="custom-checkbox custom-control">
                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-6">
@@ -90,7 +97,7 @@
                   </div>
                 </td>
                 <td>Java Project</td>
-                <td>
+                <td class="p-0 text-center text-right">
                   <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
                   <a class="btn btn-danger btn-action" data-toggle="tooltip" title="" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')" data-original-title="Delete"><i class="fas fa-trash"></i></a>
                 </td>
