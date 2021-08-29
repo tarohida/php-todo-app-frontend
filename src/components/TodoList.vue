@@ -68,7 +68,7 @@
                   v-for="(task, index) in tasks"
                   v-bind:key="task"
               >
-                <td class="p-0 text-center">
+                <td class="p-1 text-center">
                   <div class="custom-checkbox custom-control">
                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input todo-list-checkbox" v-bind:id="getId(index)">
                     <label v-bind:for="getId(index)" class="custom-control-label">&nbsp;</label>
