@@ -83,19 +83,6 @@
               <tr class="todo-list">
                 <td class="p-0 text-center">
                   <div class="custom-checkbox custom-control">
-                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-4">
-                    <label for="checkbox-4" class="custom-control-label">&nbsp;</label>
-                  </div>
-                </td>
-                <td>Android App</td>
-                <td class="p-0 text-center text-right">
-                  <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                  <a class="btn btn-danger btn-action" data-toggle="tooltip" title="" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')" data-original-title="Delete"><i class="fas fa-trash"></i></a>
-                </td>
-              </tr>
-              <tr class="todo-list">
-                <td class="p-0 text-center">
-                  <div class="custom-checkbox custom-control">
                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-5">
                     <label for="checkbox-5" class="custom-control-label">&nbsp;</label>
                   </div>
@@ -134,6 +121,7 @@ export default {
       tasks: [
           'Ecommerce website',
           'Ecommerce website2',
+          'Android App'
       ]
     }
   }
