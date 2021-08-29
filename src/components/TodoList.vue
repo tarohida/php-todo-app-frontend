@@ -51,7 +51,7 @@
       <div class="card">
         <div class="card-header">
           <label for="create-task-input-box" class="create-task-input-box-label">
-            <i class="far fa-plus-square fa-3x"></i>
+            <i class="fas fa-greater-than fa-3x"></i>
           </label>
           <input type="text"
                  class="custom-control-input create-task-input-box"
