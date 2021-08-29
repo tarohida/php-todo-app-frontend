@@ -30,7 +30,7 @@
   list-style: none;
 }
 
-#checkbox-1 {
+.todo-list-checkbox {
   width: 1.25rem;
   height: 1.25rem;
   border: 1px solid hsl(0, 0%, 85%);
@@ -70,7 +70,7 @@
               >
                 <td class="p-0 text-center">
                   <div class="custom-checkbox custom-control">
-                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" v-bind:id="getId(index)">
+                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input todo-list-checkbox" v-bind:id="getId(index)">
                     <label v-bind:for="getId(index)" class="custom-control-label">&nbsp;</label>
                   </div>
                 </td>
