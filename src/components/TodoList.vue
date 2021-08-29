@@ -65,13 +65,13 @@
               <tbody>
               <tr
                   class="todo-list"
-                  v-for="task in tasks"
+                  v-for="(task, index) in tasks"
                   v-bind:key="task"
               >
                 <td class="p-0 text-center">
                   <div class="custom-checkbox custom-control">
-                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
-                    <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" v-bind:id="getId(index)">
+                    <label v-bind:for="getId(index)" class="custom-control-label">&nbsp;</label>
                   </div>
                 </td>
                 <td>{{task}}</td>
@@ -111,6 +111,11 @@ export default {
           'Android App',
           'Logo Design'
       ]
+    }
+  },
+  methods: {
+    getId: function (index) {
+      return `checkbox-${index}`
     }
   }
 }
