@@ -63,14 +63,18 @@
           <div class="table-responsive">
             <table class="table table-hover">
               <tbody>
-              <tr class="todo-list">
+              <tr
+                  class="todo-list"
+                  v-for="task in tasks"
+                  v-bind:key="task"
+              >
                 <td class="p-0 text-center">
                   <div class="custom-checkbox custom-control">
                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
                     <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
                   </div>
                 </td>
-                <td>Ecommerce website</td>
+                <td>{{task}}</td>
                 <td class="p-0 text-center text-right">
                   <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a>
                   <a class="btn btn-danger btn-action" data-toggle="tooltip" title="" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')" data-original-title="Delete"><i class="fas fa-trash"></i></a>
@@ -122,3 +126,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      tasks: [
+          'Ecommerce website',
+          'Ecommerce website2',
+      ]
+    }
+  }
+}
+</script>
