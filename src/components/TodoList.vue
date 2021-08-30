@@ -74,8 +74,8 @@
               >
                 <td class="p-1 text-center">
                   <div class="custom-checkbox custom-control">
-                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input todo-list-checkbox" v-bind:id="getId(index)">
-                    <label v-bind:for="getId(index)" class="custom-control-label">&nbsp;</label>
+                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input todo-list-checkbox" v-bind:id="getCheckBoxId(index)">
+                    <label v-bind:for="getCheckBoxId(index)" class="custom-control-label">&nbsp;</label>
                   </div>
                 </td>
                 <td>{{task}}</td>
@@ -105,7 +105,7 @@ export default {
     }
   },
   methods: {
-    getId: function (index) {
+    getCheckBoxId: function (index) {
       return `checkbox-${index}`
     }
   }
