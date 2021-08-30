@@ -74,7 +74,11 @@
               >
                 <td class="p-1 text-center">
                   <div class="custom-checkbox custom-control">
-                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input todo-list-checkbox" v-bind:id="getCheckBoxId(index)">
+                    <input type="checkbox"
+                           data-checkboxes="mygroup"
+                           class="custom-control-input todo-list-checkbox"
+                           v-bind:id="getCheckBoxId(index)"
+                    >
                     <label v-bind:for="getCheckBoxId(index)" class="custom-control-label">&nbsp;</label>
                   </div>
                 </td>
