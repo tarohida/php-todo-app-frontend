@@ -61,6 +61,8 @@
                  class="custom-control-input create-task-input-box"
                  id="create-task-input-box"
                  placeholder="What needs to be done?"
+                 v-model="newTask"
+                 @keyup.enter="addTask"
           >
         </div>
         <div class="card-body">
@@ -105,13 +107,22 @@ export default {
           'Android App',
           'Logo Design',
           'Java Project'
-      ]
+      ],
+      newTask: ''
     }
   },
   methods: {
     getCheckBoxId: function (index) {
       return `checkbox-${index}`
-    }
-  }
+    },
+    addTask: function() {
+      const value = this.newTask && this.newTask.trim();
+      if (!value) {
+        return;
+      }
+      this.tasks.push(value);
+      this.newTask = "";
+    },
+  },
 }
 </script>
