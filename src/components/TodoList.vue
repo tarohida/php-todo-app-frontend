@@ -88,6 +88,7 @@
                 <td class="p-0 text-center text-right">
                   <i
                       class="fas fa-times delete-icon"
+                      v-bind:id="getDeleteIconId(index)"
                       @click="deleteTask"
                   ></i>
                 </td>
@@ -117,6 +118,9 @@ export default {
   methods: {
     getCheckBoxId: function (index) {
       return `checkbox-${index}`
+    },
+    getDeleteIconId: function (index) {
+      return `delete-icon-${index}`
     },
     addTask: function() {
       const value = this.newTask && this.newTask.trim();
