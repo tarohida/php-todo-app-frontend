@@ -131,7 +131,7 @@ export default {
       this.newTask = "";
     },
     deleteTask: function (index) {
-      alert('clicked!' + index);
+      this.tasks.splice(index, 1);
     }
   },
 }
