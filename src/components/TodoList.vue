@@ -86,7 +86,10 @@
                 </td>
                 <td>{{task}}</td>
                 <td class="p-0 text-center text-right">
-                  <i class="fas fa-times delete-icon"></i>
+                  <i
+                      class="fas fa-times delete-icon"
+                      @click="deleteTask"
+                  ></i>
                 </td>
               </tr>
               </tbody></table>
@@ -123,6 +126,9 @@ export default {
       this.tasks.push(value);
       this.newTask = "";
     },
+    deleteTask: function () {
+      alert('clicked!');
+    }
   },
 }
 </script>
