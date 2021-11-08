@@ -89,7 +89,7 @@
                   <i
                       class="fas fa-times delete-icon"
                       v-bind:id="getDeleteIconId(index)"
-                      @click="deleteTask"
+                      @click="deleteTask(index)"
                   ></i>
                 </td>
               </tr>
@@ -130,8 +130,8 @@ export default {
       this.tasks.push(value);
       this.newTask = "";
     },
-    deleteTask: function () {
-      alert('clicked!');
+    deleteTask: function (index) {
+      alert('clicked!' + index);
     }
   },
 }
