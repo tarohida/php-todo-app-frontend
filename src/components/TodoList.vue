@@ -103,6 +103,13 @@
 </template>
 
 <script>
+import axios from "axios";
+class Task {
+  constructor(id, title) {
+    this.id = id;
+    this.title = title;
+  }
+}
 export default {
   data: function () {
     return {
@@ -134,12 +141,23 @@ export default {
     },
     deleteTask: function (index) {
       this.tasks.splice(index, 1);
+    },
+    buildTaskFromJson: function () {
+      const data = {
+        id: 1,
+        title: 'title1'
+      };
+      console.log(data);
+      const taskkkk = new Task(data.id, data.title)
+      console.log(taskkkk)
+      return taskkkk;
     }
   },
   mounted () {
+    this.buildTaskFromJson();
     axios
         .get('http://localhost/tasks')
-        .then(response => (this.info = response.data))
+        .then(response => this.info = response.data)
   }
 }
 </script>
