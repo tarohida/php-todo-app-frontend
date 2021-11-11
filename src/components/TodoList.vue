@@ -72,7 +72,7 @@
               <tr
                   class="todo-list"
                   v-for="(task, index) in tasks"
-                  v-bind:key="task"
+                  v-bind:key="task.id"
               >
                 <td class="p-1 text-center">
                   <div class="custom-checkbox custom-control">
@@ -84,7 +84,7 @@
                     <label v-bind:for="getCheckBoxId(index)" class="custom-control-label">&nbsp;</label>
                   </div>
                 </td>
-                <td>{{task}}</td>
+                <td>{{task.title}}</td>
                 <td class="p-0 text-center text-right">
                   <i
                       class="fas fa-times delete-icon"
