@@ -49,6 +49,7 @@
 </style>
 
 <template>
+  {{ info }}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
   <div class="container">
     <div class="col-md-12 col-12 col-sm-12">
@@ -112,6 +113,7 @@ export default {
           'Logo Design',
           'Java Project'
       ],
+      info: null,
       newTask: ''
     }
   },
@@ -134,5 +136,10 @@ export default {
       this.tasks.splice(index, 1);
     }
   },
+  mounted () {
+    axios
+        .get('http://localhost/tasks')
+        .then(response => (this.info = response.data))
+  }
 }
 </script>
