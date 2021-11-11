@@ -142,22 +142,19 @@ export default {
     deleteTask: function (index) {
       this.tasks.splice(index, 1);
     },
-    buildTaskFromJson: function () {
-      const data = {
-        id: 1,
-        title: 'title1'
-      };
-      console.log(data);
+    buildTaskFromJson: function (data) {
       const taskkkk = new Task(data.id, data.title)
       console.log(taskkkk)
       return taskkkk;
     }
   },
   mounted () {
-    this.buildTaskFromJson();
+    const self = this
     axios
         .get('http://localhost/tasks')
-        .then(response => this.info = response.data)
+        .then(response => this.info = response.data.map(function (data) {
+          return self.buildTaskFromJson(data)
+        }))
   }
 }
 </script>
