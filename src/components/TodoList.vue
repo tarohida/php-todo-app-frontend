@@ -104,6 +104,7 @@
 
 <script>
 import axios from "axios";
+
 class Task {
   constructor(id, title) {
     this.id = id;
@@ -143,9 +144,7 @@ export default {
       this.tasks.splice(index, 1);
     },
     buildTaskFromJson: function (data) {
-      const taskkkk = new Task(data.id, data.title)
-      console.log(taskkkk)
-      return taskkkk;
+      return new Task(data.id, data.title);
     }
   },
   mounted () {
