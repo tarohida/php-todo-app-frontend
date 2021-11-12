@@ -135,16 +135,12 @@ export default {
     deleteTask: function (index) {
       this.tasks.splice(index, 1);
     },
-    buildTaskFromJson: function (data) {
-      return new Task(data.id, data.title);
-    }
   },
   mounted () {
-    const self = this
     axios
         .get('http://localhost/tasks')
         .then(response => this.tasks = response.data.map(function (data) {
-          return self.buildTaskFromJson(data)
+          return new Task(data.id, data.title)
         }))
   }
 }
