@@ -132,12 +132,12 @@ export default {
       const FormData = require('form-data');
       const form = new FormData();
       form.append('title', value);
-      axios.post('http://localhost/api/tasks/create',
+      axios.post('http://localhost/tasks/create',
           form
       )
       .then(response => console.log(response))
       axios
-          .get('http://localhost/api/tasks',
+          .get('http://localhost/tasks',
           )
           .then(response => this.tasks = response.data.map(function (data) {
             return new Task(data.id, data.title)
@@ -150,7 +150,7 @@ export default {
   },
   mounted () {
     axios
-        .get('http://localhost/api/tasks')
+        .get('http://localhost/tasks')
         .then(response => this.tasks = response.data.map(function (data) {
           return new Task(data.id, data.title)
         }))
