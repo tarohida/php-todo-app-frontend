@@ -129,7 +129,19 @@ export default {
       if (!value) {
         return;
       }
-      this.tasks.push(value);
+      const FormData = require('form-data');
+      const form = new FormData();
+      form.append('title', value);
+      axios.post('http://localhost/api/tasks/create',
+          form
+      )
+      .then(response => console.log(response))
+      axios
+          .get('http://localhost/api/tasks',
+          )
+          .then(response => this.tasks = response.data.map(function (data) {
+            return new Task(data.id, data.title)
+          }))
       this.newTask = "";
     },
     deleteTask: function (index) {
@@ -138,7 +150,7 @@ export default {
   },
   mounted () {
     axios
-        .get('http://localhost/tasks')
+        .get('http://localhost/api/tasks')
         .then(response => this.tasks = response.data.map(function (data) {
           return new Task(data.id, data.title)
         }))
