@@ -134,7 +134,8 @@ export default {
       form.append('title', value);
       axios.post('http://localhost/tasks/create',
           form
-      ).then(response => console.log(response))
+      ).then(response => console.log(response)
+      ).catch(error => console.log(error))
       this.newTask = "";
     },
     deleteTask: function (index) {
