@@ -149,11 +149,13 @@ export default {
     },
   },
   mounted () {
-    axios
-        .get('http://localhost/tasks')
-        .then(response => this.tasks = response.data.map(function (data) {
-          return new Task(data.id, data.title)
-        }))
+    setInterval( () =>
+        axios
+          .get('http://localhost/tasks')
+          .then(response => this.tasks = response.data.map(function (data) {
+            return new Task(data.id, data.title)
+        })), 1000
+    )
   }
 }
 </script>
