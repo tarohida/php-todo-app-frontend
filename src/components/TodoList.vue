@@ -134,14 +134,7 @@ export default {
       form.append('title', value);
       axios.post('http://localhost/tasks/create',
           form
-      )
-      .then(response => console.log(response))
-      axios
-          .get('http://localhost/tasks',
-          )
-          .then(response => this.tasks = response.data.map(function (data) {
-            return new Task(data.id, data.title)
-          }))
+      ).then(response => console.log(response))
       this.newTask = "";
     },
     deleteTask: function (index) {
