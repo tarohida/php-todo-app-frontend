@@ -138,7 +138,10 @@ export default {
       this.newTask = "";
     },
     deleteTask: function (index) {
-      this.tasks.splice(index, 1);
+      axios.delete(
+          `http://localhost/tasks/${index}`
+      ).catch(
+          error => console.log(error))
     },
   },
   mounted () {
