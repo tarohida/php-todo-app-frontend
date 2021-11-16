@@ -145,9 +145,13 @@ export default {
     setInterval( () =>
         axios
           .get('http://localhost/tasks')
-          .then(response => this.tasks = response.data.map(function (data) {
-            return new Task(data.id, data.title)
-        })), 1000
+          .then(
+              response => this.tasks = response.data.map(function (data) {
+                return new Task(data.id, data.title)
+              })
+          ).catch(
+              error => console.log(error)
+          ), 1000
     )
   }
 }
