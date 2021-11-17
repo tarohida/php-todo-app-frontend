@@ -76,21 +76,16 @@
               >
                 <td class="p-1 text-center">
                   <div class="custom-checkbox custom-control">
-                    <input type="checkbox"
-                           data-checkboxes="mygroup"
-                           class="custom-control-input todo-list-checkbox"
-                           v-bind:id="getCheckBoxId(index)"
-                    >
+                    <i
+                        class="fas fa-times delete-icon"
+                        v-bind:id="getDeleteIconId(task.id)"
+                        @click="deleteTask(task.id)"
+                    ></i>
                     <label v-bind:for="getCheckBoxId(index)" class="custom-control-label">&nbsp;</label>
                   </div>
                 </td>
                 <td>{{task.title}}</td>
                 <td class="p-0 text-center text-right">
-                  <i
-                      class="fas fa-times delete-icon"
-                      v-bind:id="getDeleteIconId(task.id)"
-                      @click="deleteTask(task.id)"
-                  ></i>
                 </td>
               </tr>
               </tbody></table>
