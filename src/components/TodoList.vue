@@ -88,8 +88,8 @@
                 <td class="p-0 text-center text-right">
                   <i
                       class="fas fa-times delete-icon"
-                      v-bind:id="getDeleteIconId(index)"
-                      @click="deleteTask(index)"
+                      v-bind:id="getDeleteIconId(task.id)"
+                      @click="deleteTask(task.id)"
                   ></i>
                 </td>
               </tr>
