@@ -30,19 +30,6 @@
   list-style: none;
 }
 
-.todo-list-checkbox {
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 1px solid hsl(0, 0%, 85%);
-  border-radius: 1px;
-  vertical-align: sub;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 1rem;
-  outline: none;
-}
-
 .delete-icon {
   color: darkred;
 }
@@ -85,8 +72,6 @@
                   </div>
                 </td>
                 <td>{{task.title}}</td>
-                <td class="p-0 text-center text-right">
-                </td>
               </tr>
               </tbody></table>
           </div>
