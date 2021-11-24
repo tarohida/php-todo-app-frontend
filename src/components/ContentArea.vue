@@ -1,5 +1,6 @@
 <template>
   <div class="vue-todo-app-content-area">
+    {{ backendUrl }}
     <TodoList></TodoList>
   </div>
 </template>
@@ -10,7 +11,10 @@ export default {
   name: "ContentArea",
   components: {
     TodoList
-  }
+  },
+  props: [
+      'backendUrl'
+  ]
 }
 </script>
 

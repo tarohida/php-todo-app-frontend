@@ -1,6 +1,8 @@
 <template>
   <Navigation></Navigation>
-  <ContentArea></ContentArea>
+  <ContentArea
+      v-bind:backend-url="backendUrl"
+  ></ContentArea>
 </template>
 
 <script>
@@ -11,7 +13,7 @@ export default {
   name: "App",
   data: function() {
     return {
-      backend_url: process.env.VUE_APP_BACKEND_URL
+      backendUrl: process.env.VUE_APP_BACKEND_URL
     }
   },
   components: {
