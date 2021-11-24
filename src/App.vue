@@ -1,6 +1,5 @@
 <template>
   <Navigation></Navigation>
-  {{ backend_url }}
   <ContentArea></ContentArea>
 </template>
 
@@ -12,7 +11,7 @@ export default {
   name: "App",
   data: function() {
     return {
-      backend_url: process.env
+      backend_url: process.env.VUE_APP_BACKEND_URL
     }
   },
   components: {
