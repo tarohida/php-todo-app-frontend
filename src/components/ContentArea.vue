@@ -1,7 +1,8 @@
 <template>
   <div class="vue-todo-app-content-area">
-    {{ backendUrl }}
-    <TodoList></TodoList>
+    <TodoList
+      v-bind:backend-url="backendUrl"
+    ></TodoList>
   </div>
 </template>
 

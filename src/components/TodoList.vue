@@ -37,6 +37,7 @@
 
 <template>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  {{ backendUrl }}
   <div class="container">
     <div class="col-md-12 col-12 col-sm-12">
       <div class="card">
@@ -97,6 +98,7 @@ export default {
       newTask: ''
     }
   },
+  props: ['backendUrl'],
   methods: {
     getCheckBoxId: function (index) {
       return `checkbox-${index}`
