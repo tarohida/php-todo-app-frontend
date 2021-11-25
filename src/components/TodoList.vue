@@ -37,7 +37,6 @@
 
 <template>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-  {{ backendUrl }}
   <div class="container">
     <div class="col-md-12 col-12 col-sm-12">
       <div class="card">
@@ -114,14 +113,14 @@ export default {
       const FormData = require('form-data');
       const form = new FormData();
       form.append('title', value);
-      axios.post('http://localhost/tasks/create',
+      axios.post(`${this.backendUrl}/tasks/create`,
           form
       ).catch(error => console.log(error))
       this.newTask = "";
     },
     deleteTask: function (index) {
       axios.delete(
-          `http://localhost/tasks/${index}`
+          `${this.backendUrl}/tasks/${index}`
       ).catch(
           error => console.log(error))
     },
@@ -129,7 +128,7 @@ export default {
   mounted () {
     setInterval( () =>
         axios
-          .get('http://localhost/tasks')
+          .get(`${this.backendUrl}/tasks`)
           .then(
               response => this.tasks = response.data.map(function (data) {
                 return new Task(data.id, data.title)
