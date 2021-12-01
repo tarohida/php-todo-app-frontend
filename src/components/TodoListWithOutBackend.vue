@@ -59,19 +59,19 @@
               <tr
                   class="todo-list"
                   v-for="(task, index) in tasks"
-                  v-bind:key="task.id"
+                  v-bind:key="task"
               >
                 <td class="p-1 text-center">
                   <div class="custom-checkbox custom-control">
                     <i
                         class="fas fa-times delete-icon"
-                        v-bind:id="getDeleteIconId(task.id)"
-                        @click="deleteTask(task.id)"
+                        v-bind:id="getDeleteIconId(index)"
+                        @click="deleteTask(index)"
                     ></i>
-                    <label v-bind:for="getCheckBoxId(index)" class="custom-control-label">&nbsp;</label>
+                    <label v-bind:for="getDeleteIconId(index)" class="custom-control-label">&nbsp;</label>
                   </div>
                 </td>
-                <td>{{task.title}}</td>
+                <td>{{task}}</td>
               </tr>
               </tbody></table>
           </div>
@@ -82,14 +82,6 @@
 </template>
 
 <script>
-import axios from "axios";
-
-class Task {
-  constructor(id, title) {
-    this.id = id;
-    this.title = title;
-  }
-}
 export default {
   data: function () {
     return {
@@ -97,7 +89,6 @@ export default {
       newTask: ''
     }
   },
-  props: ['backendUrl'],
   methods: {
     getCheckBoxId: function (index) {
       return `checkbox-${index}`
@@ -110,33 +101,12 @@ export default {
       if (!value) {
         return;
       }
-      const FormData = require('form-data');
-      const form = new FormData();
-      form.append('title', value);
-      axios.post(`${this.backendUrl}/tasks/create`,
-          form
-      ).catch(error => console.log(error))
+      this.tasks.push(value);
       this.newTask = "";
     },
     deleteTask: function (index) {
-      axios.delete(
-          `${this.backendUrl}/tasks/${index}`
-      ).catch(
-          error => console.log(error))
-    },
+      this.tasks.splice(index, 1);
+    }
   },
-  mounted () {
-    setInterval( () =>
-        axios
-          .get(`${this.backendUrl}/tasks`)
-          .then(
-              response => this.tasks = response.data.map(function (data) {
-                return new Task(data.id, data.title)
-              })
-          ).catch(
-              error => console.log(error)
-          ), 1000
-    )
-  }
 }
 </script>
